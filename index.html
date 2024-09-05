@@ -4,20 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rex's Diner Calculator</title>
+    <style>
+        .order-item {
+            display: grid;
+            grid-template-columns: auto 1fr; /* Two columns: one for the text, one for the input */
+            gap: 10px; /* Space between the text and the input */
+            margin-bottom: 10px; /* Space between each row */
+        }
+
+        .order-item input {
+            justify-self: start; /* Align inputs to start */
+            width: 100px; /* Set a fixed width for inputs */
+        }
+    </style>
 </head>
 <body>
     <div>
-        <p>Rex's Diner Calculator</p>
-        </form>
-            <span>Burgers $6 (2 for $10) - <input id="burgerAmount" placeholder="Amount of Burgers"></input></span><br>
-            <span>Steak $5 (2 for $8)- <input id="steakAmount" placeholder="Amount of Steaks"></input></span><br>
-            <span>Breakfast $5 (2 for $8) <input id="breakfastAmount" placeholder="Amount of Breakfast"></input></span><br>
-            <span>Soda $2 - <input id="sodaAmount" placeholder="Amount of Soda"></input></span><br>
-            <span>Coffee $2 - <input id="coffeeAmount" placeholder="Amount of Coffee"></input></span><br>
-            <span>Milkshake $5 - <input id="milkshakeAmount" placeholder="Amount of Milkshakes"></input></span><br>
+        <h1>Rex's Diner Calculator</h1>
+        <form>
+            <div class="order-item">
+                <span>Burgers $6 (2 for $10)</span>
+                <input id="burgerAmount" placeholder="# of Burgers">
+            </div>
+            <div class="order-item">
+                <span>Steak $5 (2 for $8)</span>
+                <input id="steakAmount" placeholder="# of Steaks">
+            </div>
+            <div class="order-item">
+                <span>Breakfast $5 (2 for $8)</span>
+                <input id="breakfastAmount" placeholder="# of Breakfast">
+            </div>
+            <div class="order-item">
+                <span>Soda $2</span>
+                <input id="sodaAmount" placeholder="# of Sodas">
+            </div>
+            <div class="order-item">
+                <span>Coffee $2</span>
+                <input id="coffeeAmount" placeholder="# of Coffees">
+            </div>
+            <div class="order-item">
+                <span>Milkshake $5</span>
+                <input id="milkshakeAmount" placeholder="# of Milkshakes">
+            </div>
 
             <button id="calculateBtn">Calculate</button>
-        <form>
+        </form>
     </div>
 
     <h2 id="totalCost"></h2>

@@ -1,6 +1,7 @@
 var calculateBtn = document.getElementById("calculateBtn");
 
 calculateBtn.onclick = function() {
+    event.preventDefault();
     // Retrieve the values from the input fields and convert them to numbers
     var burgerAmount = Number(document.getElementById("burgerAmount").value);
     var steakAmount = Number(document.getElementById("steakAmount").value);
