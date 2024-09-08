@@ -25,4 +25,35 @@ calculateBtn.onclick = function() {
 
     // Display the total on the page
     document.getElementById("totalCost").innerText = "Total = " + "$" + total.toFixed(2);
+
+    // Build the order summary only with items that have been ordered
+    var orderSummary = "PREVIOUS ORDER:\n";  
+    if (burgerAmount > 0) {
+        orderSummary += "Burgers: " + burgerAmount + "\n";
+    }
+    if (steakAmount > 0) {
+        orderSummary += "Steaks: " + steakAmount + "\n";
+    }
+    if (breakfastAmount > 0) {
+        orderSummary += "Breakfast: " + breakfastAmount + "\n";
+    }
+    if (sodaAmount > 0) {
+        orderSummary += "Soda: " + sodaAmount + "\n";
+    }
+    if (coffeeAmount > 0) {
+        orderSummary += "Coffee: " + coffeeAmount + "\n";
+    }
+    if (milkshakeAmount > 0) {
+        orderSummary += "Milkshake: " + milkshakeAmount + "\n";
+    }
+
+    // Update the order summary element with the text
+    document.getElementById("orderSummary").innerText = orderSummary;
+
+    document.getElementById("burgerAmount").value = "";
+    document.getElementById("steakAmount").value = "";
+    document.getElementById("breakfastAmount").value = "";
+    document.getElementById("sodaAmount").value = "";
+    document.getElementById("coffeeAmount").value = "";
+    document.getElementById("milkshakeAmount").value = "";
 };
