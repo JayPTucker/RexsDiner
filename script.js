@@ -24,5 +24,5 @@ calculateBtn.onclick = function() {
     var total = burgerTotal + steakTotal + breakfastTotal + sodaTotal + coffeeTotal + milkshakeTotal;
 
     // Display the total on the page
-    document.getElementById("totalCost").innerText = "$" + total.toFixed(2);
+    document.getElementById("totalCost").innerText = "Total = " + "$" + total.toFixed(2);
 };

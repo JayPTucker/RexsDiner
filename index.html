@@ -4,58 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rex's Diner Calculator</title>
-    <style>
-        .order-item {
-            display: grid;
-            grid-template-columns: auto 1fr; /* Two columns: one for the text, one for the input */
-            gap: 10px; /* Space between the text and the input */
-            margin-bottom: 10px; /* Space between each row */
-        }
 
-        .order-item input {
-            justify-self: start; /* Align inputs to start */
-            width: 100px; /* Set a fixed width for inputs */
-        }
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
-        body {
-            background-color: gray !important;
-        }
-    </style>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div>
+    <div class="container-fluid justify-content-center text-center">
         <h1>Rex's Diner Calculator</h1>
         <form>
-            <div class="order-item">
-                <span>Burgers $6 (2 for $10)</span>
-                <input id="burgerAmount" placeholder="# of Burgers">
-            </div>
-            <div class="order-item">
-                <span>Steak $5 (2 for $8)</span>
-                <input id="steakAmount" placeholder="# of Steaks">
-            </div>
-            <div class="order-item">
-                <span>Breakfast $5 (2 for $8)</span>
-                <input id="breakfastAmount" placeholder="# of Breakfast">
-            </div>
-            <div class="order-item">
-                <span>Soda $2</span>
-                <input id="sodaAmount" placeholder="# of Sodas">
-            </div>
-            <div class="order-item">
-                <span>Coffee $2</span>
-                <input id="coffeeAmount" placeholder="# of Coffees">
-            </div>
-            <div class="order-item">
-                <span>Milkshake $5</span>
-                <input id="milkshakeAmount" placeholder="# of Milkshakes">
+            
+            <div class="row">
+
+                <div class="col-md-3">
+                    <!-- EMPTY COL -->
+                </div>
+
+                <div class="col-md-1 order-item">
+                    <span>Burger - $6<br>(2 for $10)</span><br>
+                    <img class="menu-item-img" src="./images/burger.png"><br>
+                    <input id="burgerAmount" placeholder="# of Burgers">
+                </div>
+                <div class="col-md-1 order-item">
+                    <span>Steak - $5<br>(2 for $8)</span><br>
+                    <img class="menu-item-img" src="./images/steak.jpg"><br>
+                    <input id="steakAmount" placeholder="# of Steaks">
+                </div>
+                <div class="col-md-1 order-item">
+                    <span>Breakfast - $5<br>(2 for $8)</span><br>
+                    <img class="menu-item-img" src="./images/breakfast.png"><br>
+                    <input id="breakfastAmount" placeholder="# of Breakfast">
+                </div>
+                <div class="col-md-1 order-item">
+                    <span>Soda $2</span><br><br>
+                    <img class="menu-item-img" src="./images/soda.jpg"><br>
+                    <input id="sodaAmount" placeholder="# of Sodas">
+                </div>
+                <div class="col-md-1 order-item">
+                    <span>Coffee $2</span><br><br>
+                    <img class="menu-item-img" src="./images/coffee.png"><br>
+                    <input id="coffeeAmount" placeholder="# of Coffees">
+                </div>
+                <div class="col-md-1 order-item">
+                    <span>Milkshake $5</span><br><br>
+                    <img class="menu-item-img" src="./images/milkshake.png"><br>
+                    <input id="milkshakeAmount" placeholder="# of Milkshakes">
+                </div>
+
+                <div class="col-md-3">
+                    <!-- EMPTY COL -->
+                </div>
+
             </div>
 
             <button id="calculateBtn">Calculate</button>
         </form>
+
+        <h2 id="totalCost"></h2>
     </div>
 
-    <h2 id="totalCost"></h2>
+    
 </body>
 
 <script type="text/javascript" src="./script.js"></script>
